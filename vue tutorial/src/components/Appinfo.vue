@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <h1>Hello vue</h1>
+    <div class="app-info">
+        <p class="fs-3 text-upercase">Barcha kinolar soni:0</p>
+        <p class="fs-4 text-upercase">Ko'rilgan kinolar soni:0</p>
     </div>
 </template>
 <script>
@@ -8,6 +9,11 @@ export default {
     
 }
 </script>
-<style>
-    
+<style scoped>
+.app-info{
+ padding: 1.5rem;
+ background-color: #fcfaf5;
+ border-radius: 4px;
+ box-shadow: 15px 15px 15px rgba(0,0,0,.15);
+}  
 </style>
