@@ -1,18 +1,24 @@
 <template>
-  <div class="app">
+  <div class="app font-monospace">
     <div class="content">
       <Appinfo/>
       <div class="search-panel">
         <SearchPanel/>
+        <AppFilter/>
       </div>
+       <MovieList/>
+       <MovieadForm/>
     </div>
   </div>
 </template>
 <script>
+import AppFilter from '../components/AppFilter.vue'
 import Appinfo from '../components/Appinfo.vue'
+import MovieadForm from '../components/MovieadForm.vue'
+import MovieList from '../components/MovieList.vue'
 import SearchPanel from '../components/SearchPanel.vue'
 export default {
-  components: { Appinfo, SearchPanel },
+  components: { Appinfo, SearchPanel, AppFilter, MovieList, MovieadForm },
  
 }
 </script>
