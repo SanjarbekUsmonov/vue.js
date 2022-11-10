@@ -7,15 +7,12 @@
 import MovieListItem from './MovieListItem.vue'
 export default {
   components: { MovieListItem },
-    data() {
-      return {
-        movies:[
-          {name:'Omar', raqamlar:"123"},
-          {name:'Muhammad',raqamlar:"321",},
-          {name:'Usman',raqamlar:"654"},
-        ]
-      }
-    },
+    props : {
+      movies: {
+      type: Array,
+      required: true
+     }
+    }
 }
 </script>
 <style scoped>

@@ -1,12 +1,14 @@
 <template>
   <div class="app font-monospace">
     <div class="content">
-      <Appinfo/>
+      <Appinfo 
+      :kinoSoni = "movies.length" 
+      :korilganlarSoni = "movies.filter (c => c.favoreite).length"/>
       <div class="search-panel">
         <SearchPanel/>
         <AppFilter/>
       </div>
-       <MovieList/>
+       <MovieList :movies = "movies"/>
        <MovieadForm/>
     </div>
   </div>
@@ -19,7 +21,15 @@ import MovieList from '../components/MovieList.vue'
 import SearchPanel from '../components/SearchPanel.vue'
 export default {
   components: { Appinfo, SearchPanel, AppFilter, MovieList, MovieadForm },
- 
+  data() {
+      return {
+        movies:[
+          {name:'Omar', raqamlar:123,favoreite: true},
+          {name:'Muhammad',raqamlar:321,favoreite: true},
+          {name:'Usman',raqamlar:654,favoreite: false},
+        ]
+      }
+    },
 }
 </script>
 <style>

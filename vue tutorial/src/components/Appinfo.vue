@@ -1,12 +1,21 @@
 <template>
     <div class="app-info">
-        <p class="fs-3 text-upercase">Barcha kinolar soni:0</p>
-        <p class="fs-4 text-upercase">Ko'rilgan kinolar soni:0</p>
+        <p class="fs-3 text-upercase">Barcha kinolar soni: {{kinoSoni}}</p>
+        <p class="fs-4 text-upercase">Ko'rilgan kinolar soni:{{korilganlarSoni}}</p>
     </div>
 </template>
 <script>
 export default {
-    
+    props:{
+        kinoSoni:{
+            type: Number,
+            requared: true
+        },
+        korilganlarSoni:{
+            type: Number,
+            requared: true
+        }
+    }
 }
 </script>
 <style scoped>
